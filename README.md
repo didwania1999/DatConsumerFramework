@@ -1,4 +1,4 @@
-## Data Consumer Framework Prototype
+
 # This is a prototype of Data Consumer Framework!
 
 # Features Added:
@@ -21,9 +21,9 @@ Connectivity to Snowflake using JDBC and SCD Type 1 & 2 functionality
 Go to the project directory in Powershell run  [mvn package]
 
 # Running Locally:
-
+```
 spark-submit --packages net.snowflake:spark-snowflake_2.11:2.8.6-spark_2.4,net.snowflake:snowflake-jdbc:3.13.2,com.typesafe:config:1.4.1  --master local --class ETLPROCESS.Driver C:\Users\ASUS\IdeaProjects\test\target\DCF.jar  local  application.conf  input.json
-
+```
 # HDInsight
 
 - [x] 1.Create a Spark cluster on Microsoft Azure HDInsight.[It will take 30 mins for the deployment to succeed]
@@ -31,8 +31,9 @@ spark-submit --packages net.snowflake:spark-snowflake_2.11:2.8.6-spark_2.4,net.s
 - [x] 3.Connect to the cluster using PuTTY with ssh available in access keys on the Cluster Portal.
 - [x] 4.Run the Spark Submit to trigger the job.
 - [x] Format for Spark Submit command
+```
 spark-submit --packages net.snowflake:spark-snowflake_2.11:2.8.6-spark_2.4,net.snowflake:snowflake-jdbc:3.13.2,com.typesafe:config:1.4.1  --master yarn --deploy-mode client --class ETLPROCESS.Driver  wasbs://intern2021-2021-08-10t09-15-33-363z@intern2021hdistorage.blob.core.windows.net/DCF.jar yarn application.conf input.json 
-
+```
 # Format to access files on Azure Blob Storage:
 <code>
   wasbs://<storage container name>@<storage account name>hdistorage.blob.core.windows.net/<filepath>
