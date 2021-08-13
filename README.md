@@ -103,7 +103,7 @@ Even in local when jar file is moved out of project folder same error.
 
 2.Reading files from azure blob storage using the file path
 ```
- spark.conf.set( "fs.azure.sas.intern2021-2021-08-10t09-15-33-363z.intern2021hdistorage.blob.core.windows.net",        "sp=r&st=2021-08-10T17:46:23Z&se=2021-08-11T01:46:23Z&spr=https&sv=2020-08-04&sr=b&sig=wkGJgLsBkkl5FivppuA3VcHk%2BCnG25bUxAiMqqFWvfs%3D")
+spark.conf.set( "fs.azure.sas.intern2021-2021-08-10t09-15-33-363z.intern2021hdistorage.blob.core.windows.net",        "sp=r&st=2021-08-10T17:46:23Z&se=2021-08-11T01:46:23Z&spr=https&sv=2020-08-04&sr=b&sig=wkGJgLsBkkl5FivppuA3VcHk%2BCnG25bUxAiMqqFWvfs%3D")
 df=spark.read.format("org.apache.spark.sql.execution.datasources.csv.CSVFileFormat").option("header", "true").option("inferSchema","true").load(file_path)
 ```
 Maven packages added
